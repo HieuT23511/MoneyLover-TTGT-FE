@@ -24,7 +24,7 @@ function App() {
 
     useEffect(() => {
         if (auth) {
-            const socket = io.connect('https://moneylover-backend-production.up.railway.app');
+            const socket = io.connect('https://money-lover-ttgt-be-production.up.railway.app/');
             socket.emit('login', email);
             socket.on('forwardMessage', async (data) => {
                 const {senderEmail, message, walletInfo, permission} = data;
